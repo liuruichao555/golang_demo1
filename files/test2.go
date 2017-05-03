@@ -5,7 +5,6 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"strings"
 )
 
 func main() {
@@ -15,14 +14,14 @@ func main() {
 	}
 	buf := bufio.NewReader(f)
 	for {
-		line, err := buf.ReadString('\n')
+		//line, err := buf.ReadString('\n')
+		line, _, err := buf.ReadLine()
 		if err != nil {
 			if err == io.EOF {
 				break
 			}
 			panic(err)
 		}
-		line = strings.Replace(line, "\n", "", 1)
-		fmt.Println(line)
+		fmt.Println(string(line))
 	}
 }
