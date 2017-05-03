@@ -18,6 +18,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	defer response.Body.Close()
+
 	if response.StatusCode == 200 {
 		html, err := ioutil.ReadAll(response.Body)
 		if err != nil {
