@@ -7,9 +7,9 @@ import (
 )
 
 type User struct {
-	username string
-	password string
-	age      int
+	username string  `json:"username"`
+	password string  `json:"password"`
+	age      int     `json:"age"`
 }
 
 func main() {
