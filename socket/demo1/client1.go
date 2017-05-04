@@ -15,7 +15,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer  conn.Close()
+	defer conn.Close()
 
 	conn.Write([]byte("bye"))
 	buffer := make([]byte, 204)
