@@ -15,10 +15,16 @@ func (r *Bird) move() {
 	r.i++
 }
 
+func (r *Bird) print() {
+	fmt.Println("print: ", r)
+}
+
 func main() {
 	animal := Bird{10}
 	animal.move()
 	animal.move()
 	animal.move()
 	animal.move()
+
+	animal.print()
 }
