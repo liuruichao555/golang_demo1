@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/go-martini/martini"
 	"github.com/ethereum/go-ethereum/log"
+	"fmt"
 )
 
 func main() {
@@ -23,6 +24,14 @@ func main() {
 
 	m.NotFound(func() string {
 		return "404"
+	})
+
+	m.Get("/hello/**", func(params martini.Params) string {
+		return "Hello " + params["_1"]
+	})
+
+	m.Get("/hello/(?P<name>[a-zA-Z]+)", func(params martini.Params) string {
+		return fmt.Sprintf ("Hello %s", params["name"])
 	})
 
 	m.RunOnAddr(":8080")
