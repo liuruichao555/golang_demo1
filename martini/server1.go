@@ -13,6 +13,10 @@ func main() {
 		return "welcome => " + params["name"]
 	})
 
+	m.Get("/error", func() (int, string){
+		return 404, "error"
+	})
+
 	m.RunOnAddr(":8080")
 	//m.Run()
 }
