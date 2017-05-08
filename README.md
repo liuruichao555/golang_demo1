@@ -7,3 +7,4 @@
     6. json操作
     7. channel操作
     8. 异常
+    9. socket操作
