@@ -5,7 +5,9 @@ import "github.com/go-martini/martini"
 func main() {
 	m := martini.Classic()
 
-	
+	m.Get("/", func() string {
+		return "Hello World"
+	})
 
 	m.RunOnAddr(":8080")
 }
