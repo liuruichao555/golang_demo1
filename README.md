@@ -6,3 +6,4 @@
     5. martini学习
     6. json操作
     7. channel操作
+    8. 异常
