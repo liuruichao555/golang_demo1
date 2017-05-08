@@ -5,3 +5,4 @@
     4. file操作
     5. martini学习
     6. json操作
+    7. channel操作
