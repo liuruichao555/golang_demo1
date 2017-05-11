@@ -13,3 +13,4 @@
     12. make
     13. new
     14. function
+    15. 基本类型
