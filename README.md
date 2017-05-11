@@ -12,3 +12,4 @@
     11. beego
     12. make
     13. new
+    14. function
