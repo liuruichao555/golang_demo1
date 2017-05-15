@@ -10,8 +10,8 @@ import (
 func main() {
 	url := "http://localhost:8080/test"
 
-	reader := strings.NewReader("username=dsafsad&password=liu")
-	resp, err := http.Post(url, "application/json", reader)
+	reader := strings.NewReader("username=liuruichao&password=liuruichao")
+	resp, err := http.Post(url, "application/x-www-form-urlencoded", reader)
 	if err != nil {
 		panic(err)
 	}

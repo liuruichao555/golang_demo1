@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/go-martini/martini"
 	"fmt"
+	"net/http"
 )
 
 func main() {
@@ -12,12 +13,10 @@ func main() {
 		return "Hello World"
 	})
 
-	m.Post("/test", func(body string) string {
-		fmt.Println(body)
-		return "success"
-		/*username := params["username"]
-		password := params["password"]*/
-		/*fmt.Println("username: ", username, ", password: ", password, ".")
+	m.Post("/test", func(req *http.Request) string {
+		username := req.FormValue("username")
+		password := req.FormValue("password")
+		fmt.Println("username: ", username, ", password: ", password, ".")
 		if username == "" || password == "" {
 			return "username or password is empty!"
 		}
@@ -25,7 +24,7 @@ func main() {
 		if username == "liuruichao" && password == "liuruichao" {
 			return "login success"
 		}
-		return "login fail"*/
+		return "login fail"
 	})
 
 	m.RunOnAddr(":8080")
