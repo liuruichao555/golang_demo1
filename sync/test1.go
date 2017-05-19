@@ -8,6 +8,7 @@ import (
 
 func main() {
 	var mutex sync.Mutex
+	// 加锁
 	mutex.Lock()
 
 	for i := 1; i < 4; i++ {
@@ -20,6 +21,7 @@ func main() {
 
 	time.Sleep(time.Second)
 	fmt.Println("unlock the lock")
+	// 释放锁
 	mutex.Unlock()
 
 	fmt.Println("The lock is unlocked.")
