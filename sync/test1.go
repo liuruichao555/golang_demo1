@@ -25,5 +25,7 @@ func main() {
 	mutex.Unlock()
 
 	fmt.Println("The lock is unlocked.")
+
+	// 等待打印结果
 	time.Sleep(time.Second)
 }
