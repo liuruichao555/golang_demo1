@@ -19,6 +19,7 @@ func main() {
 		}(i)
 	}
 
+	// 等待打印结果
 	time.Sleep(time.Second)
 	fmt.Println("unlock the lock")
 	// 释放锁
